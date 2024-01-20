@@ -4,8 +4,25 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-const app = createApp(App)
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
-app.use(router)
+const firebaseConfig = {
+  apiKey: "AIzaSyA6hqThcAUXeRWTlBLsQMTG2sw-W5Lx744",
+  authDomain: "indianspringskatahdins-187d9.firebaseapp.com",
+  projectId: "indianspringskatahdins-187d9",
+  storageBucket: "indianspringskatahdins-187d9.appspot.com",
+  messagingSenderId: "49980286736",
+  appId: "1:49980286736:web:c4cc74994248b9a5ea6795",
+  measurementId: "G-5C26L7CC6X"
+};
 
-app.mount('#app')
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+const vueapp = createApp(App)
+
+vueapp.use(router)
+
+vueapp.mount('#app')

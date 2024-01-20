@@ -1,4 +1,19 @@
 html, body{
     margin: 0;
     padding: 0;
+    color: white
+}
+
+main{
+    min-height: 300vh;
+    background: linear-gradient(270deg, #164A41 30%, #4D774E 50%, #9DC88D 100%);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #f99c06;
 }
