@@ -4,9 +4,9 @@
 
 <template>
     <nav id="nav">
-        <a class="nav-text" href="/">Home</a>
         <a class="nav-text" href="/about">About</a>
-        <a><img class="nav-logo" alt="Indian Springs Katahdins" src="@/components/photos/ISKLogoText.png"></a>
+        <a class="nav-text" href="/menu">Menu</a>
+        <a href="/"><img class="nav-logo" alt="Indian Springs Katahdins" src="@/components/photos/ISKLogoText.png"></a>
         <a class="nav-text" href="/recipes">Recipes</a>
         <a class="nav-text" href="/contact">Contact</a>
     </nav>

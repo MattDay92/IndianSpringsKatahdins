@@ -5,7 +5,8 @@ html, body{
 }
 
 main{
-    min-height: 300vh;
+    min-height: 100vh;
+    padding-top: 10vh;
     background: linear-gradient(270deg, #164A41 30%, #4D774E 50%, #9DC88D 100%);
 }
 
