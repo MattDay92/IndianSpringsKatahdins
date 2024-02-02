@@ -24,6 +24,7 @@
         background: black;
         color: white;
         font-size: 30px;
+        z-index: 100;
     }
 
     .nav-logo{

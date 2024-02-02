@@ -4,29 +4,18 @@
 
 <template>
     <div class="banner">
-        <div class="banner-info">
-            <h1>
-                The best sheep around!
-            </h1>
-            <div class="banner-btns">
-                <button>About</button>
-                <button>Recipes</button>
-                <button>Menu</button>
-                <button>Contact</button>
-            </div>
-        </div>
-        <img class="banner-img" alt="Indian Springs Katahdins Logo" src="@/components/photos/ISKLogo.png">
+        <img class="banner-img" alt="Indian Springs Katahdins Logo" src="@/components/photos/ISKLogoTransparent.png">
     </div>
 </template>
 
 <style scoped>
 .banner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 80vw;
     margin: auto;
-    min-height: 100vh;
+    min-height: 95vh;
 }
 
 .banner-info{
