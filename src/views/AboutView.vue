@@ -8,12 +8,15 @@ import FooterVue from '@/components/Footer.vue';
   <main>
     <article>
       <div id="our-story-1">
-        <img class="our-story-img" src="@/components/photos/GetToKnowText.png" />
+        <img class="our-story-img" alt="Get to know Indian Springs Katahdins"
+          src="@/components/photos/GetToKnowText.png" />
       </div>
-      <div id="our-story-img-div-1"><img class="our-story-img" src="@/components/photos/AboutCollage1.png" /></div>
+      <div id="our-story-img-div-1"><img class="our-story-img" alt="Glossary of ISK Photos"
+          src="@/components/photos/AboutCollage1.png" /></div>
     </article>
     <article class="pb-5">
-      <div id="our-story-img-div-2"><img class="our-story-img" src="@/components/photos/AboutCollage2.png" /></div>
+      <div id="our-story-img-div-2"><img class="our-story-img" alt="Glossary of ISK Photos"
+          src="@/components/photos/AboutCollage2.png" /></div>
       <div id="our-story-2">
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item">
@@ -561,18 +564,18 @@ h1 {
   width: 40vw;
 }
 
-#our-story-1{
+#our-story-1 {
   display: flex;
   align-items: center;
 }
 
-#our-story-2{
+#our-story-2 {
   margin-top: 10vh;
   display: flex;
   justify-content: center;
 }
 
-#our-story-img-div-1{
+#our-story-img-div-1 {
   width: 40vw;
   display: flex;
   flex-direction: column;
@@ -592,21 +595,21 @@ h1 {
   color: #efb250;
 }
 
-.accordion{
+.accordion {
   width: 80%;
 }
 
-.accordion-button{
+.accordion-button {
   background: #e5a53f;
   color: white;
 }
 
-.accordion-button:focus{
+.accordion-button:focus {
   background: #d38e1e;
   color: white;
 }
 
-.accordion-body{
+.accordion-body {
   height: 20vw;
   overflow-y: scroll;
 }

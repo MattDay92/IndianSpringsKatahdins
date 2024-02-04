@@ -1,1 +1,0 @@
-import{_ as e,c as a,a as s,F as t,b as o,o as n,N as r}from"./index-nNakkLL9.js";const c=o("main",null,null,-1),_={__name:"AboutView",setup(i){return(l,u)=>(n(),a(t,null,[s(r),c],64))}},d=e(_,[["__file","/Users/mattday/Desktop/Coding/IndianSpringsKatahdins/src/views/AboutView.vue"]]);export{d as default};
