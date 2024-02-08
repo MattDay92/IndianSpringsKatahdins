@@ -554,10 +554,6 @@ article {
   justify-content: space-around;
 }
 
-h1 {
-  text-align: center;
-}
-
 #our-story-1,
 #our-story-2 {
   text-align: center;
@@ -602,16 +598,20 @@ h1 {
 .accordion-button {
   background: #e5a53f;
   color: white;
+  border: 1px solid black;
 }
 
 .accordion-button:focus {
   background: #d38e1e;
   color: white;
+  box-shadow: none;
+  border: 2px solid black;
 }
 
 .accordion-body {
   height: 20vw;
   overflow-y: scroll;
 }
+
 </style>
 

@@ -12,4 +12,8 @@ import FooterVue from '@/components/Footer.vue'
   <FooterVue />
 </template>
 
-<style scoped></style>
+<style scoped>
+
+
+
+</style>

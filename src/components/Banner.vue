@@ -13,9 +13,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80vw;
+    width: 40vw;
     margin: auto;
     min-height: 95vh;
+}
+
+.banner-img{
+    width: 100%;
 }
 
 .banner-info{
@@ -72,5 +76,17 @@ button:hover {
         font-size: 24px;
         min-width: 196px;
     }
+}
+
+@media (max-width: 769px) {
+    .banner{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .banner{
+        width: 80vw;
+    }    
 }
 </style>

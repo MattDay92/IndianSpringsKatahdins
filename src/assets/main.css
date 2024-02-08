@@ -18,3 +18,11 @@ a{
 a:hover{
     color: #f99c06;
 }
+
+.btn {
+    background: #f99c06;
+    color: white;
+    width: 50%;
+    margin: auto;
+    margin-top: 2vh;
+  }

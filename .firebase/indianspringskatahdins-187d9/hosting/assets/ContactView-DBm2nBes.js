@@ -1,1 +1,0 @@
-import{_ as e,c as a,a as t,F as s,e as n,o,N as c}from"./index-ROBjWtig.js";const r=n("main",null,null,-1),_={__name:"ContactView",setup(i){return(l,p)=>(o(),a(s,null,[t(c),r],64))}},m=e(_,[["__file","/Users/mattday/Desktop/Coding/IndianSpringsKatahdins/src/views/ContactView.vue"]]);export{m as default};

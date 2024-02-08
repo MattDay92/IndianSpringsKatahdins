@@ -81,7 +81,7 @@ export default {
 .img-div {
   display: flex;
   justify-content: center;
-  width: 60vw;
+  width: 45vw;
   margin: auto;
 }
 
@@ -96,11 +96,16 @@ img {
   margin: auto;
 }
 
+.form-control:focus{
+  box-shadow:none;
+}
+
 .btn {
   background: #f99c06;
   color: white;
   width: 50%;
   margin: auto;
   margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 </style>
