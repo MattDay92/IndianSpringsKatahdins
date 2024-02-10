@@ -5,7 +5,7 @@
 <template>
     <nav id="nav">
         <a class="nav-text" href="/about">About</a>
-        <a class="nav-text" href="/menu">Menu</a>
+        <a class="nav-text" href="https://docs.google.com/document/d/e/2PACX-1vTe_sI1G2pWT-D4oTsGsDW-W-6cRxPwfUoAJWYUUMqqbWAFRUdsPDrMAvksfG6mpJtDrzcUolQTjD-H/pub" target="_blank">Meat for Sale</a>
         <a href="/"><img class="nav-logo" alt="Indian Springs Katahdins" src="@/components/photos/ISKLogoText.png"></a>
         <a class="nav-text" href="/recipes">Recipes</a>
         <a class="nav-text" href="/contact">Contact</a>
@@ -25,6 +25,11 @@
         color: white;
         font-size: 30px;
         z-index: 100;
+    }
+
+    .nav-text{
+        width: 15vw;
+        text-align: center;
     }
 
     .nav-logo{

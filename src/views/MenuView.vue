@@ -6,11 +6,15 @@ import Navbar from '@/components/Navbar.vue';
   <div>
     <Navbar />
     <main>
-
+        <embed typeof="application/pdf" src="/ISKPriceSheet.pdf"></embed>  
     </main>
   </div>
 </template>
 
-<style>
+<style scoped>
 
+  embed {
+    width: 100%;
+    height: 80vh;
+  }
 </style>

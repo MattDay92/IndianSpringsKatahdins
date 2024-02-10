@@ -557,18 +557,20 @@ article {
 #our-story-1,
 #our-story-2 {
   text-align: center;
-  width: 40vw;
 }
 
 #our-story-1 {
   display: flex;
   align-items: center;
+  width: 40vw;
 }
 
 #our-story-2 {
   margin-top: 10vh;
   display: flex;
   justify-content: center;
+  width: 50vw;
+
 }
 
 #our-story-img-div-1 {

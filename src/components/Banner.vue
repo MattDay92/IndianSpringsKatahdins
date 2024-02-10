@@ -5,30 +5,29 @@
 <template>
     <div class="banner">
         <img class="banner-img" alt="Indian Springs Katahdins Logo" src="@/components/photos/ISKLogoTransparent.png">
+        <h1 class="banner-info">At Indian Springs, we raise 100% grass-fed Katahdin sheep, rotationally grazing them on our farm in Trafalgar, Indiana. We sell meat cuts, whole lambs for butcher, and commercial breeding stock.</h1>
     </div>
 </template>
 
 <style scoped>
 .banner {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 40vw;
+    width: 80vw;
     margin: auto;
     min-height: 95vh;
 }
 
 .banner-img{
-    width: 100%;
+    width: 30vw;
 }
 
 .banner-info{
-    width: 40vw;
+    width: 30vw;
     min-height: 25vh;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    font-size: 1.5rem;
 }
 
 .banner-btns {
