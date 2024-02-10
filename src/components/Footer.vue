@@ -1,16 +1,31 @@
 <script setup>
 import { getDatabase, ref, set, push } from 'firebase/database'
 
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+const alert = (message, type) => {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+    ].join('')
+
+    alertPlaceholder.append(wrapper)
+}
+
 </script>
 
 <template>
     <footer>
         <div class="footer-social">
             <h2>Follow us on Facebook</h2>
-            <a href="https://www.facebook.com/profile.php?id=61555159784777" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61555159784777" target="_blank"><i
+                    class="fa-brands fa-square-facebook"></i></a>
         </div>
         <div class="subscribe-form">
-            <form @submit.prevent="updateFormData">
+            <form name="newsletter-form" @submit.prevent="updateFormData">
                 <label>Subscribe to the ISK Newsletter</label>
                 <input class="form-control" name="signupemail" placeholder="Enter Email Address" />
                 <button class="btn" type="submit">Subscribe</button>
@@ -22,19 +37,28 @@ import { getDatabase, ref, set, push } from 'firebase/database'
 <script>
 
 const updateFormData = (event) => {
-        event.preventDefault()
-        const db = getDatabase();
+    event.preventDefault()
+    const db = getDatabase();
 
-        const emailAddress = event.target.signupemail.value
+    const emailAddress = event.target.signupemail.value
 
-        const emailListRef = ref(db, 'emails')
+    const emailListRef = ref(db, 'emails')
 
-        const newEmail = push(emailListRef)
+    const newEmail = push(emailListRef)
 
-        set(newEmail, {
-            emailAddress
-        })
-    }
+    set(newEmail, {
+        emailAddress
+    }).then(
+        () => {
+            alert('Successfully Subscribed to the ISK Newsletter!', 'success');
+            event.target.reset()
+        },
+        (error) => {
+            console.log('FAILED...', error.text);
+        },
+    )
+
+}
 
 </script>
 
@@ -48,18 +72,22 @@ footer {
     align-items: center;
 }
 
-.footer-social{
+.footer-social {
     text-align: center;
     margin-bottom: 2vh;
 }
 
-.fa-brands{
+.fa-brands {
     font-size: 30px;
 }
 
-.subscribe-form{
+.subscribe-form {
     padding-top: 2vh;
     padding-bottom: 2vh;
     text-align: center;
+}
+
+.btn:hover {
+    background: #c37800;
 }
 </style>

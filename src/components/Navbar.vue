@@ -30,6 +30,7 @@
     .nav-text{
         width: 15vw;
         text-align: center;
+        font-weight: 700;
     }
 
     .nav-logo{
