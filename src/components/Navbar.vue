@@ -23,7 +23,7 @@
         width: 100vw;
         background: black;
         color: white;
-        font-size: 30px;
+        font-size: 1.5rem;
         z-index: 100;
     }
 
@@ -33,8 +33,20 @@
         font-weight: 700;
     }
 
+    @media (max-width: 425px) {
+        .nav-text{
+            display: none;
+        }
+    }
+
     .nav-logo{
-        width: 12vw !important;
+        width: 12vw;
         margin-top: 1vh;
+    }
+
+    @media (max-width: 768px) {
+        .nav-logo{
+            width: 25vw;
+        }
     }
 </style>

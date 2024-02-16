@@ -11,8 +11,10 @@ import FooterVue from '@/components/Footer.vue';
         <img class="our-story-img" alt="Get to know Indian Springs Katahdins"
           src="@/components/photos/GetToKnowText.png" />
       </div>
-      <div id="our-story-img-div-1"><img class="our-story-img" alt="Glossary of ISK Photos"
-          src="@/components/photos/AboutCollage1.png" /></div>
+      <div id="our-story-img-div-1">
+        <img class="our-story-img" alt="Glossary of ISK Photos"
+          src="@/components/photos/AboutCollage1.png" />
+      </div>
     </article>
     <article class="pb-5">
       <div id="our-story-img-div-2"><img class="our-story-img" alt="Glossary of ISK Photos"
@@ -548,7 +550,7 @@ import FooterVue from '@/components/Footer.vue';
 article {
   width: 80vw;
   padding-top: 5vh;
-  height: 95vh;
+  min-height: 95vh;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -565,14 +567,6 @@ article {
   width: 40vw;
 }
 
-#our-story-2 {
-  margin-top: 10vh;
-  display: flex;
-  justify-content: center;
-  width: 50vw;
-
-}
-
 #our-story-img-div-1 {
   width: 40vw;
   display: flex;
@@ -580,9 +574,47 @@ article {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  article{
+    width: 90vw;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    flex-wrap: wrap;
+  }
+
+  #our-story-1{
+    width: 100%;
+    height: fit-content;
+  }
+
+  #our-story-img-div-1{
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+#our-story-2 {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+}
 
 #our-story-img-div-2 {
   width: 40vw;
+}
+
+@media (max-width: 768px) {
+  #our-story-2{
+    width: 100%;
+    height: fit-content;
+  }
+
+  #our-story-img-div-2{
+    width: 100%;
+    height: fit-content;
+  }
 }
 
 .our-story-img {
@@ -615,5 +647,10 @@ article {
   overflow-y: scroll;
 }
 
+@media (max-width: 768px) {
+  .accordion-body{
+    height: 50vh;
+  }
+}
 </style>
 

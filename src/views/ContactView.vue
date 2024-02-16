@@ -39,10 +39,15 @@ const alert = (message, type) => {
         <input class="btn" type="submit" id="liveAlertBtn" value="Send">
       </form>
       <div class="contact-direct-div">
+        <h2>Address</h2>
+        <p class="mb-0">6709 S 200 W</p>
+        <p>Trafalgar, IN 46181</p>
         <h2>Direct Inquiries</h2>
         <p>Indian.Springs.Katahdins@gmail.com</p>
         <h2>Follow us on Facebook!</h2>
-        <a href="https://www.facebook.com/profile.php?id=61555159784777" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61555159784777" target="_blank"><i
+            class="fa-brands fa-square-facebook"></i></a>
+
       </div>
     </div>
   </main>
@@ -82,17 +87,37 @@ export default {
 </script>
 
 <style scoped>
-
-.contact-content{
+.contact-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: auto;
   width: 80vw;
 }
 
-.contact-direct-div{
-  text-align: center ;
+@media (max-width: 768px) {
+  .img-div {
+    width: 80vw !important;
+  }
+
+  .contact-content {
+    flex-wrap: wrap;
+  }
+
+  .form {
+    width: 80vw !important;
+  }
+
+  .contact-direct-div {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
 }
+
+.contact-direct-div {
+  text-align: center;
+}
+
 .alert {
   position: fixed;
 }
@@ -112,7 +137,6 @@ img {
   display: flex;
   flex-direction: column;
   width: 25vw;
-  margin: auto;
 }
 
 .form-control:focus {
@@ -128,7 +152,7 @@ img {
   margin-bottom: 2vh;
 }
 
-.fa-brands{
-    font-size: 30px;
+.fa-brands {
+  font-size: 30px;
 }
 </style>

@@ -77,6 +77,22 @@ footer {
     margin-bottom: 2vh;
 }
 
+.footer-social h2{
+    font-size: 2rem;
+}
+
+@media (max-width: 425px) {
+    .footer-social{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-social h2{
+        font-size: 1.5rem ;
+    }
+}
+
 .fa-brands {
     font-size: 30px;
 }

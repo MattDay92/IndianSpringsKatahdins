@@ -14,6 +14,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     width: 80vw;
     margin: auto;
     min-height: 95vh;
@@ -79,13 +80,25 @@ button:hover {
 
 @media (max-width: 769px) {
     .banner{
-        width: 60vw;
+        width: 80vw;
+    }
+
+    .banner-info{
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 425px) {
     .banner{
         width: 80vw;
-    }    
+    }
+    
+    .banner-img{
+        width: 100%;
+    }
+
+    .banner-info{
+        width: 100%;
+    }
 }
 </style>
