@@ -1,0 +1,1 @@
+import{_ as e,c as a,a as s,F as t,e as n,o as c,N as o}from"./index-N2Yt6VCd.js";const r=n("main",null,null,-1),i={__name:"RecipeView",setup(_){return(p,l)=>(c(),a(t,null,[s(o),r],64))}},m=e(i,[["__file","/Users/mattday/Desktop/Coding/IndianSpringsKatahdins/src/views/RecipeView.vue"]]);export{m as default};

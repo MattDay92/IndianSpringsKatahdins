@@ -3,6 +3,8 @@ html, body{
     padding: 0;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+    background: black;
 }
 
 main{
