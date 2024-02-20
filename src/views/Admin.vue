@@ -180,6 +180,10 @@ onMounted(getRecipes)
     flex-wrap: wrap;
 }
 
+.recipe-div{
+    margin-top: 5vh;
+}
+
 .card {
     color: black;
     margin: 5px;
@@ -192,10 +196,28 @@ onMounted(getRecipes)
     width: 80vw;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: auto;
     text-align: center;
     margin-top: 10vh;
     padding-bottom: 10vh;
+}
+
+@media (max-width: 768px) {
+    .img-div {
+        width: 80vw !important;
+    }
+
+    .card{
+      width: 35vw;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .card{
+      width: 70vw;
+    }
 }
 
 .email-div {
@@ -206,6 +228,14 @@ onMounted(getRecipes)
 .email-list {
     padding-top: 10vh;
     list-style-type: none;
+}
+
+.btn-danger{
+    background: red;
+}
+
+.btn-danger:hover{
+    background: rgb(204, 0, 0);
 }
 </style>
 
