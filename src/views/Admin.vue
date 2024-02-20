@@ -17,10 +17,10 @@
             </div>
             <div class="recipes">
                 <form name="recipe-form" @submit.prevent="addRecipe">
-                    <label class="form-label">Add New Recipe</label>
+                    <h2 class="form-label">Add New Recipe</h2>
                     <input class="form-control" name="RecipeName" placeholder="Enter Recipe Name" />
                     <textarea id="tiny" name="RecipeBody" placeholder="Enter Recipe Info"></textarea>
-                    <button class="btn" type="submit">Subscribe</button>
+                    <button class="btn" type="submit">Add Recipe</button>
                 </form>
                 <div class="recipe-div">
                     <div v-if="state.recipes.length">
@@ -58,19 +58,17 @@ onMounted(() => {
     tinymce.init({
         selector: 'textarea#tiny',
         menu: {
-            file: { title: 'File', items: 'newdocument restoredraft | preview | export print | deleteallconversations' },
             edit: { title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall | searchreplace' },
-            view: { title: 'View', items: 'code | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments' },
-            insert: { title: 'Insert', items: 'image link media addcomment pageembed template codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime' },
+            view: { title: 'View', items: 'code | visualaid visualchars visualblocks | preview fullscreen | showcomments' },
+            insert: { title: 'Insert', items: 'image link media addcomment pageembed template codesample inserttable | charmap hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime' },
             format: { title: 'Format', items: 'bold italic underline strikethrough superscript subscript codeformat | styles blocks fontfamily fontsize align lineheight | forecolor backcolor | language | removeformat' },
-            tools: { title: 'Tools', items: 'spellchecker spellcheckerlanguage | a11ycheck code wordcount' },
             table: { title: 'Table', items: 'inserttable | cell row column | advtablesort | tableprops deletetable' },
             help: { title: 'Help', items: 'help' }
         },
         plugins: [
-            'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
-            'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
-            'media', 'table', 'emoticons', 'template', 'help'
+            'advlist', 'autolink', 'link', 'image', 'lists', 'anchor',
+            'searchreplace', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+            'media', 'table', 'template', 'help'
         ],
     });
 });

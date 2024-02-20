@@ -2,6 +2,9 @@
   <div>
       <Navbar />
       <main>
+          <div class="img-div">
+            <img src="@/components/photos/RecipesHeader.png" />
+          </div>
           <div class="recipes">
               <div class="recipe-div">
                   <div v-if="state.recipes.length">
@@ -10,7 +13,7 @@
                               <div class="card">
                                   <!-- <img src="..." class="card-img-top" alt="..."> -->
                                   <div class="card-body">
-                                      <h3 class="card-title">{{ recipe.recipeName }}</h3>
+                                      <h2 class="card-title">{{ recipe.recipeName }}</h2>
                                       <div class="card-text" v-html="recipe.recipeBody"></div>
                                   </div>
                               </div>
@@ -23,13 +26,15 @@
               </div>
           </div>
       </main>
+      <FooterVue />
   </div>
 </template>
 
 <script setup>
 
 import Navbar from '@/components/Navbar.vue';
-import { getDatabase, ref, child, get, push, set, remove } from "firebase/database";
+import FooterVue from '@/components/Footer.vue';
+import { getDatabase, ref, child, get } from "firebase/database";
 import { onMounted, reactive } from 'vue';
 
 const dbRef = ref(getDatabase());
@@ -60,6 +65,17 @@ onMounted(getRecipes)
 </script>
 
 <style scoped>
+.img-div {
+    display: flex;
+    justify-content: center;
+    width: 45vw;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+}
+
 .recipe-list {
   display: flex;
   justify-content: space-around;
@@ -72,6 +88,23 @@ onMounted(getRecipes)
   width: 20vw;
   height: 300px;
   overflow-y: scroll;
+}
+
+@media (max-width: 768px) {
+    .img-div {
+        width: 80vw !important;
+    }
+
+    .card{
+      width: 35vw;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .card{
+      width: 70vw;
+    }
 }
 
 .recipes {

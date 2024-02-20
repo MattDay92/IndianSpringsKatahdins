@@ -102,8 +102,4 @@ footer {
     padding-bottom: 2vh;
     text-align: center;
 }
-
-.btn:hover {
-    background: #c37800;
-}
 </style>

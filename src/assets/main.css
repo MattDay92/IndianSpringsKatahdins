@@ -25,7 +25,11 @@ a:hover{
 .btn {
     background: #f99c06;
     color: white;
-    width: 50%;
+    min-width: 15vw;
     margin: auto;
     margin-top: 2vh;
   }
+
+.btn:hover {
+    background: #c37800;
+}

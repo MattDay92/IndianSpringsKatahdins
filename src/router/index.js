@@ -28,14 +28,14 @@ const router = createRouter({
       component: () => import('../views/ContactView.vue')
     },
     {
-      path: '/menu',
-      name: 'menu',
-      component: () => import('../views/MenuView.vue')
-    },
-    {
       path: '/admin12345',
       name: 'admin',
       component: () => import('../views/Admin.vue')
+    },
+    {
+      path: '/livestock',
+      name: 'livestock',
+      component: () => import('../views/Livestock.vue')
     }
   ]
 })
