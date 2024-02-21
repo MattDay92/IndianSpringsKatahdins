@@ -26,7 +26,7 @@ const alert = (message, type) => {
         </div>
         <div class="subscribe-form">
             <form name="newsletter-form" @submit.prevent="updateFormData">
-                <label>Subscribe to the ISK Newsletter</label>
+                <label>Subscribe to our Newsletter</label>
                 <input class="form-control" name="signupemail" placeholder="Enter Email Address" />
                 <button class="btn" type="submit">Subscribe</button>
             </form>

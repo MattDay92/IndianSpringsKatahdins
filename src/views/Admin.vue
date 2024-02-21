@@ -19,7 +19,7 @@
                 <form name="recipe-form" @submit.prevent="addRecipe">
                     <h2 class="form-label">Add New Recipe</h2>
                     <input class="form-control" name="RecipeName" placeholder="Enter Recipe Name" />
-                    <textarea id="tiny" name="RecipeBody" placeholder="Enter Recipe Info"></textarea>
+                    <textarea class="form-control" name="RecipeBody" placeholder="Enter Recipe URL"></textarea>
                     <button class="btn" type="submit">Add Recipe</button>
                 </form>
                 <div class="recipe-div">
@@ -31,7 +31,7 @@
                                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                                     <div class="card-body">
                                         <h3 class="card-title">{{ recipe.recipeName }}</h3>
-                                        <div class="card-text" v-html="recipe.recipeBody"></div>
+                                        <a class="btn" target="_blank" :href="`${recipe.recipeBody}`">View Recipe</a>
                                         <button @click="deleteRecipe(state.recipeIndices[index])"
                                             class="btn btn-sm btn-danger">Delete</button>
                                     </div>
@@ -111,7 +111,7 @@ const addRecipe = (event) => {
     const db = getDatabase();
 
     const recipeName = event.target.RecipeName.value
-    const recipeBody = tinymce.get('tiny').getContent();
+    const recipeBody = event.target.RecipeBody.value;
 
     const recipeListRef = ref(db, 'recipes')
 
@@ -190,6 +190,17 @@ onMounted(getRecipes)
     width: 20vw;
     height: 300px;
     overflow-y: scroll;
+}
+
+.card-title{
+  font-weight: 700;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
 }
 
 .recipes {

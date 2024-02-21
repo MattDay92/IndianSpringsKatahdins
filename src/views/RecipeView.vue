@@ -14,7 +14,7 @@
                                   <!-- <img src="..." class="card-img-top" alt="..."> -->
                                   <div class="card-body">
                                       <h2 class="card-title">{{ recipe.recipeName }}</h2>
-                                      <div class="card-text" v-html="recipe.recipeBody"></div>
+                                      <a class="btn" target="_blank" :href="`${recipe.recipeBody}`">View Recipe</a>
                                   </div>
                               </div>
                           </div>
@@ -86,8 +86,19 @@ img {
   color: black;
   margin: 5px;
   width: 20vw;
-  height: 300px;
+  height: 200px;
   overflow-y: scroll;
+}
+
+.card-title{
+  font-weight: 700;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
 }
 
 @media (max-width: 768px) {

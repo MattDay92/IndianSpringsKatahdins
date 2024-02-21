@@ -26,10 +26,10 @@ a:hover{
     background: #f99c06;
     color: white;
     min-width: 15vw;
-    margin: auto;
     margin-top: 2vh;
   }
 
 .btn:hover {
     background: #c37800;
+    color: white;
 }

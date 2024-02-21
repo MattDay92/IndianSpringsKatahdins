@@ -12,10 +12,8 @@ import FooterVue from '@/components/Footer.vue';
             </div>
             <div class="livestock-text">
                 Are you interested in purchasing a starter flock of Katahdin lambs or sheep, additions to your current
-                flock,
-                or even just lambs to finish yourself? Our ewes will be lambing beginning in late April 2024 and we
-                anticipate
-                having 45+ lambs born. Because we use 2 separate registered Katahdin rams, we anticipate being able to sell
+                flock, or even just lambs to finish yourself? Our ewes will be lambing beginning in late April and we
+                anticipate having 45+ lambs born. Because we use 2 separate registered Katahdin rams, we anticipate being able to sell
                 starter flocks with ewes and a ram that are not genetically related. Contact us for more information.
             </div>
             <a class="btn" href="/contact">Contact</a>
