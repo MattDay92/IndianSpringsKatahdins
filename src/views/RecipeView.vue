@@ -86,7 +86,7 @@ img {
 .card {
   color: black;
   margin: 5px;
-  width: 20vw;
+  width: 25vw;
   height: 200px;
   overflow-y: scroll;
 }

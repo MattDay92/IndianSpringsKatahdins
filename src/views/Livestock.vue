@@ -44,6 +44,10 @@ img {
     font-size: 1.5rem;
 }
 
+.btn{
+    margin-bottom: 10vh;
+}
+
 
 
 @media (max-width: 768px) {
