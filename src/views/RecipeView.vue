@@ -78,8 +78,9 @@ img {
 
 .recipe-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 80vw;
 }
 
 .card {
@@ -113,8 +114,16 @@ img {
 
 @media (max-width: 425px) {
 
+  .img-div{
+    padding-top: 5vh;
+  }
+
     .card{
       width: 70vw;
+    }
+
+    .recipe-list{
+      justify-content: center;
     }
 }
 

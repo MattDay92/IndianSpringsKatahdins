@@ -8,7 +8,7 @@ export default {
     methods: {
         openNav() {
             const navHeight = document.getElementById('mobile-nav-section')
-            if (navHeight.style.height === '0px'){
+            if (navHeight.style.height === '0px') {
                 navHeight.style.height = "fit-content"
                 navHeight.style.opacity = "1"
                 navHeight.style.pointerEvents = "all"
@@ -17,7 +17,16 @@ export default {
                 navHeight.style.opacity = '0'
                 navHeight.style.pointerEvents = "none"
             }
+        },
+
+        navClick() {
+            const navSections = document.getElementsByClassName('mobile-nav-text');
+            for (const nav of navSections) {
+                nav.style.pointerEvents = "none";
+            }
         }
+
+
     }
 };
 
@@ -33,20 +42,20 @@ export default {
         </div>
         <a href="/"><img class="nav-logo" alt="Indian Springs Katahdins" src="@/components/photos/ISKLogoText.png"></a>
         <div class="nav-section">
-            <a class="nav-text" href="/livestock">Livestock for Sale</a>
+            <a class="nav-text" href="/livestock">Livestock</a>
             <a class="nav-text" href="/recipes">Recipes</a>
             <a class="nav-text" href="/contact">Contact</a>
         </div>
         <i @click="openNav" class="fa-solid fa-bars"></i>
     </nav>
-    <div id="mobile-nav-section" class="mobile-nav-section" style="height: 0px;">
-        <a class="mobile-nav-text" href="/about">About</a>
-        <a class="mobile-nav-text"
+    <div id="mobile-nav-section" class="mobile-nav-section" style="height: 0px; pointer-events: none;">
+        <a @click="navClick" class="mobile-nav-text" href="/about">About</a>
+        <a @click="navClick" class="mobile-nav-text"
             href="https://docs.google.com/document/d/e/2PACX-1vTe_sI1G2pWT-D4oTsGsDW-W-6cRxPwfUoAJWYUUMqqbWAFRUdsPDrMAvksfG6mpJtDrzcUolQTjD-H/pub"
             target="_blank">Meat for Sale</a>
-        <a class="mobile-nav-text" href="/livestock">Livestock for Sale</a>
-        <a class="mobile-nav-text" href="/recipes">Recipes</a>
-        <a class="mobile-nav-text" href="/contact">Contact</a>
+        <a @click="navClick" class="mobile-nav-text" href="/livestock">Livestock</a>
+        <a @click="navClick" class="mobile-nav-text" href="/recipes">Recipes</a>
+        <a @click="navClick" class="mobile-nav-text" href="/contact">Contact</a>
     </div>
 </template>
 
@@ -81,12 +90,11 @@ export default {
 }
 
 .nav-logo {
-    width: 12vw;
+    width: 180px;
     margin-top: 1vh;
 }
 
 @media (max-width: 768px) {
-
     .nav-text {
         display: none;
     }
@@ -98,7 +106,7 @@ export default {
     }
 
     .nav-logo {
-        width: 25vw !important;
+        width: 180px !important;
     }
 
     #mobile-nav-section {

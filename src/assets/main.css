@@ -13,6 +13,12 @@ main{
     background: linear-gradient(270deg, #164A41 30%, #4D774E 50%, #9DC88D 100%);
 }
 
+@media (max-width: 768px) {
+    main{
+        background: linear-gradient(270deg, #164A41 20%, #4D774E 70%, #9DC88D 100%);
+    }
+}
+
 a{
     text-decoration: none;
     color: white;

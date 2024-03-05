@@ -28,16 +28,18 @@ const alert = (message, type) => {
       <img alt="Contact Indian Springs Katahdins" src="@/components/photos/ContactISK.png" />
     </div>
     <div class="contact-content">
+      <div class="form-div">
       <form class="form" ref="form" @submit.prevent="sendEmail">
         <input type="hidden" value="Indian Springs Katahdins" name="to_name">
         <label>Name</label>
         <input class="form-control" type="text" name="from_name">
         <label>Email</label>
-        <input class="form-control" type="email" name="from_email">
+        <input class="form-control" type="email" name="from_name">
         <label>Message</label>
         <textarea class="form-control" name="message"></textarea>
         <input class="btn" type="submit" id="liveAlertBtn" value="Send">
       </form>
+      </div>
       <div class="contact-direct-div">
         <h2>Address</h2>
         <p class="mb-0">6709 S 200 W</p>
@@ -98,6 +100,7 @@ export default {
 @media (max-width: 768px) {
   .img-div {
     width: 80vw !important;
+    padding-top: 10vh;
   }
 
   .contact-content {
@@ -107,10 +110,19 @@ export default {
   .form {
     width: 80vw !important;
   }
+  
 
   .contact-direct-div {
     margin-top: 5vh;
     margin-bottom: 5vh;
+  }
+}
+
+@media (max-width: 425px) {
+  .form-div{
+    height: 60vh;
+    display: flex;
+    align-items: center;
   }
 }
 

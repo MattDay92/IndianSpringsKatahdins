@@ -12,6 +12,7 @@
     "@emailjs/browser": "^4.1.0",
     "@tinymce/tinymce-vue": "^5.1.1",
     "firebase": "^10.7.2",
+    "sass": "^1.71.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },

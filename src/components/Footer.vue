@@ -42,22 +42,27 @@ const updateFormData = (event) => {
 
     const emailAddress = event.target.signupemail.value
 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     const emailListRef = ref(db, 'emails')
 
     const newEmail = push(emailListRef)
 
-    set(newEmail, {
-        emailAddress
-    }).then(
-        () => {
-            alert('Successfully Subscribed to the ISK Newsletter!', 'success');
-            event.target.reset()
-        },
-        (error) => {
-            console.log('FAILED...', error.text);
-        },
-    )
-
+    if (emailPattern.test(emailAddress)) {
+        set(newEmail, {
+            emailAddress
+        }).then(
+            () => {
+                alert('Successfully Subscribed to the ISK Newsletter!', 'success');
+                event.target.reset()
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+            },
+        )
+    } else {
+        alert('Please enter a valid email address');
+    }
 }
 
 </script>
@@ -77,19 +82,19 @@ footer {
     margin-bottom: 2vh;
 }
 
-.footer-social h2{
+.footer-social h2 {
     font-size: 2rem;
 }
 
 @media (max-width: 425px) {
-    .footer-social{
+    .footer-social {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .footer-social h2{
-        font-size: 1.5rem ;
+    .footer-social h2 {
+        font-size: 1.5rem;
     }
 }
 
