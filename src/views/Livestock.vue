@@ -8,7 +8,7 @@ import FooterVue from '@/components/Footer.vue';
         <Navbar />
         <main>
             <div class="img-div">
-                <img src="@/components/photos/LivestockForSale.png" />
+                <img alt="Livestock For Sale" src="@/components/photos/LivestockForSale.png" />
             </div>
             <div class="livestock-text">
                 Are you interested in purchasing a starter flock of Katahdin lambs or sheep, additions to your current

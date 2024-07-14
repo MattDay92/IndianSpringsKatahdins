@@ -449,7 +449,7 @@ import FooterVue from '@/components/Footer.vue';
                   great deal more for dominance, until the pecking order is set.
                 </p>
                 <h2><strong>Livestock Guardian Dogs</strong></h2>
-                <p><strong>Livestock Guardian Dogs (LDGs) </strong> are used for protection, not herding. We have 2 LGDs,
+                <p><strong>Livestock Guardian Dogs (LGDs) </strong> are used for protection, not herding. We have 2 LGDs,
                   one is a Great
                   Pyrenees/Anatolian Shepherd mix (Lucky, our female) and the other is a Great Pyrenees/Anatolian
                   Shepherd/Bernese Mountain dog mix (Rocky, our male). </p>

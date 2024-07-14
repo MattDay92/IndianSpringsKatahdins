@@ -3,7 +3,7 @@
       <Navbar />
       <main>
           <div class="img-div">
-            <img src="@/components/photos/RecipesHeader.png" />
+            <img alt="Recipes" src="@/components/photos/RecipesHeader.png" />
           </div>
           <div class="recipes">
               <div class="recipe-div">

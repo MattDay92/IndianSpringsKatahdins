@@ -29,7 +29,7 @@ const alert = (message, type) => {
     </div>
     <div class="contact-content">
       <div class="form-div">
-      <form class="form" ref="form" @submit.prevent="sendEmail">
+      <form class="form" name="contact-form" ref="form" @submit.prevent="sendEmail">
         <input type="hidden" value="Indian Springs Katahdins" name="to_name">
         <label>Name</label>
         <input class="form-control" type="text" name="from_name">
@@ -47,7 +47,7 @@ const alert = (message, type) => {
         <h2>Direct Inquiries</h2>
         <p>Indian.Springs.Katahdins@gmail.com</p>
         <h2>Follow us on Facebook!</h2>
-        <a href="https://www.facebook.com/profile.php?id=61555159784777" target="_blank"><i
+        <a href="https://www.facebook.com/profile.php?id=61555159784777" target="_blank"><i alt="Facebook"
             class="fa-brands fa-square-facebook"></i></a>
 
       </div>
